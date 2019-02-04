@@ -1,0 +1,14 @@
+# Contains all the options we'd normally pass to docker-cli
+
+# version of docker composer
+version: "3"
+
+# Containers (services) we want to create 
+# pulled from docker hub
+services:
+  redis-server:
+    image: 'redis'
+  node-app:
+    build: .
+    ports:
+      - "4001:8081"
