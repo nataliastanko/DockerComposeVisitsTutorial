@@ -12,3 +12,4 @@ services:
     build: .
     ports:
       - "4001:8081"
+    restart: always  
