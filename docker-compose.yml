@@ -1,4 +1,4 @@
-# Contains all the options we'd normally pass to docker-cli
+# Contains all the options we'd pass to docker-cli
 
 # version of docker composer
 version: "3"
@@ -12,4 +12,5 @@ services:
     build: .
     ports:
       - "4001:8081"
-    restart: always  
+    # restart if container crashed
+    restart: always # on-failure #no #unless-stopped
